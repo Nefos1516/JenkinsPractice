@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     git 'https://github.com/Nefos1516/JenkinsPractice.git'
-                    sh 'javac ./src/Main.java'
+                    sh '"%JAVA_HOME%/bin/javac.exe" ./src/Main.java'
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    sh 'java Main'
+                    sh '"%JAVA_HOME%/bin/java.exe" ./src/Main.java'
                 }
             }
             post {
