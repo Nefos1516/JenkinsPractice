@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     git 'https://github.com/Nefos1516/JenkinsPractice.git'
-                    bat 'javac ./src/Main.java'
+                    bat 'javac ./src/Main.java -d .'
                 }
             }
         }
@@ -14,8 +14,8 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    bat 'java -cp src Main'
-                    bat 'jar cf Main.jar ./src/Main.class'
+                    bat 'java Main'
+                    bat 'jar cfe Main.jar Main Main.class'
                 }
             }
             post {
