@@ -19,7 +19,8 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: 'artifact.txt', 'target/*.jar'
+                    archiveArtifacts 'artifact.txt'
+                    archiveArtifacts 'target/*.jar'
                 }
             }
         }
