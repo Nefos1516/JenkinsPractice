@@ -14,7 +14,7 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    bat 'java Main'
+                    bat 'java ./src/Main'
                     bat 'jar cfe Main.jar Main Main.class'
                 }
             }
