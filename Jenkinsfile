@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     bat 'java -cp src Main'
-                    bat 'jar cfe Main.jar src/Main ./src/Main.class'
+                    bat 'jar cfe Main.jar./src/Main.class'
                 }
             }
             post {
